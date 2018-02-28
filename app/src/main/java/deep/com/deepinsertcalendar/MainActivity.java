@@ -61,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Clock clock = new Clock("123", "456");
+                clock.hasclock = 1;
+                clock.dtstart = System.currentTimeMillis();
+                clock.dtend = System.currentTimeMillis()+3600000;
                 DeepCalendarUtil.addCalendarEvent(MainActivity.this, clock);
             }
         });
