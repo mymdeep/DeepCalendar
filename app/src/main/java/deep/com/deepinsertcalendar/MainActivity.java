@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getAccountBtn = findViewById(R.id.get);
+        getAccountBtn = (Button)findViewById(R.id.get);
         getAccountBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        insetAccountBtn = findViewById(R.id.insertaccount);
+        insetAccountBtn = (Button)findViewById(R.id.insertaccount);
         insetAccountBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 DeepCalendarUtil.addAccount(MainActivity.this,account);
             }
         });
-        insertEventByACCBtn = findViewById(R.id.insertbyuser);
+        insertEventByACCBtn = (Button)findViewById(R.id.insertbyuser);
         insertEventByACCBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,14 +49,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        delEventBtn = findViewById(R.id.delevent);
+        delEventBtn = (Button)findViewById(R.id.delevent);
         delEventBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 DeepCalendarUtil.deleteCalendarEvent(MainActivity.this,"aaaa");
             }
         });
-        insertEventBtn = findViewById(R.id.insert);
+        insertEventBtn = (Button)findViewById(R.id.insert);
         insertEventBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
